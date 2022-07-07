@@ -39,7 +39,7 @@ public class CreateTicketPage extends HelpdeskBasePage {
     private WebElement inputSubmitterEmail;
 
     // todo: проинициализировать элементы
-    public CreateTicketPage(WebDriver driver) {
+    public CreateTicketPage() {
         PageFactory.initElements(driver, this);
     }
 

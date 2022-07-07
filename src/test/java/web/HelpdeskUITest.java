@@ -53,7 +53,7 @@ public class HelpdeskUITest {
         mainMenu.clickOnNewTicketButton();
 
         ticket = buildNewTicket();
-        CreateTicketPage createTicketPage = new CreateTicketPage(driver);
+        CreateTicketPage createTicketPage = new CreateTicketPage();
         createTicketPage.createTicket(ticket);
 
         ViewPage viewPage = new ViewPage();
