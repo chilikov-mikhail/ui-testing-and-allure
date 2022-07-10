@@ -33,6 +33,7 @@ public class TicketsPage extends HelpdeskBasePage {
                 .findFirst()
                 .orElseThrow(() -> new AssertionError("Не найден тикет с id " + id))
                 .click();
+        AbstractPage.makeScreenshot();
     }
 
 }

@@ -42,15 +42,18 @@ public class LoginPage extends HelpdeskBasePage {
     @Step("Ввести логин {user}")
     private void setUser(String user) {
         this.user.sendKeys(user);
+        AbstractPage.makeScreenshot();
     }
 
     @Step("Ввести пароль")
     private void setPassword(String password) {
         this.password.sendKeys(password);
+        AbstractPage.makeScreenshot();
     }
 
     @Step("Нажать кнопку авторизации")
     private void clickOnLoginButton() {
         this.loginButton.click();
+        AbstractPage.makeScreenshot();
     }
 }

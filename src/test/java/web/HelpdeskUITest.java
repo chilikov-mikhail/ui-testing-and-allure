@@ -25,7 +25,7 @@ public class HelpdeskUITest {
         setupDriver();
     }
 
-    @Step("Загрузить конфигурацилнные файлы")
+    @Step("Загрузить конфигурационные файлы")
     private void loadProperties() throws IOException {
         // Читаем конфигурационные файлы в System.properties
         System.getProperties().load(ClassLoader.getSystemResourceAsStream("config.properties"));
@@ -48,7 +48,7 @@ public class HelpdeskUITest {
 
     @Test
     public void createTicketTest() {
-        // todo: шаги тест-кейса
+        // шаги тест-кейса
         MainMenu mainMenu = new MainMenu(driver);
         mainMenu.clickOnNewTicketButton();
 
@@ -76,7 +76,7 @@ public class HelpdeskUITest {
 
     private Ticket buildNewTicket() {
         Ticket ticket = new Ticket();
-        // todo: заполнить поля тикета
+        // заполняем поля тикета
         ticket.setQueue(1);
         ticket.setTitle("Заголовок тестового тикета");
         ticket.setDescription("Description тестового тикета");
