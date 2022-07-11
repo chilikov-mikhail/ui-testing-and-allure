@@ -42,7 +42,6 @@ public class ViewPage extends HelpdeskBasePage {
     @Step("Проверить значение полей на карточке тикета")
     public ViewPage checkTicket(Ticket ticket) {
         Assert.assertTrue(getTicketTitle().contains(ticket.getTitle()), "Имя тикета не соответствует");
-        // todo: добавить проверки
         Assert.assertEquals(queue.getText().replaceAll("Queue: ", ""),
                 Dictionaries.getQueue(ticket.getQueue()));
         Assert.assertEquals(email.getText(), ticket.getSubmitter_email());

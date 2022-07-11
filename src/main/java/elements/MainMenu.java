@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pages.AbstractPage;
 
 /** Главное меню (блок элементов) */
 public class MainMenu {
@@ -33,11 +34,13 @@ public class MainMenu {
     @Step("Нажать кнопку создания нового тикета")
     public void clickOnNewTicketButton() {
         newTicketButton.click();
+        AbstractPage.makeScreenshot();
     }
 
     @Step("Нажать кнопку логина")
     public void clickOnLogInButton() {
         logInButton.click();
+        AbstractPage.makeScreenshot();
     }
 
     @Step("Найти тикет с помощью поиска")
@@ -51,12 +54,19 @@ public class MainMenu {
     @Step("Ввести в поле поиска значение {text}")
     public MainMenu setInputSearch(String text) {
         inputSearch.sendKeys(text);
+        AbstractPage.makeScreenshot();
         return this;
     }
 
     @Step("Нажать кнопку поиска")
     public void clickOnGoButton() {
         goButton.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        AbstractPage.makeScreenshot();
     }
 
     @Step("Получить логин пользователя")

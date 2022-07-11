@@ -19,7 +19,7 @@ public class TicketPage extends HelpdeskBasePage {
        поведение теста при этом изменится непредсказуемым образом и ошибку будет сложно найти. */
 
     private WebElement dueDate = driver.findElement(By.xpath("//th[text()='Due Date']/following-sibling::td[1]"));
-    // todo: проинициализировать элементы через driver.findElement
+    // инициализация элементов через driver.findElement
     private WebElement title = driver.findElement(By.xpath("//th[contains(text(), 'Queue')]"));
     private WebElement queue = driver.findElement(By.xpath("//th[contains(text(), 'Queue')]"));
     private WebElement email = driver.findElement(By.xpath("//td[contains(text(), '@')]"));
@@ -28,7 +28,6 @@ public class TicketPage extends HelpdeskBasePage {
 
     @Step("Проверить значение полей на странице тикета")
     public void checkTicket(Ticket ticket) {
-        // todo: добавить реализацию метода
         Assert.assertEquals(getTitle(), ticket.getTitle(), "Имя тикета не соответствует");
         Assert.assertEquals(getQueue(), Dictionaries.getQueue(ticket.getQueue()),"Queue не соответствует");
         Assert.assertEquals(getEmail(), ticket.getSubmitter_email(), "Submitter_email не соответствует");
