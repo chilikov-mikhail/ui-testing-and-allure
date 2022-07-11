@@ -1,5 +1,7 @@
-# UI testing (Selenium WebDriver)
+# UI testing (Selenium WebDriver, Allure)
 Автоматизация тестирования системы учета заявок, используя веб интерфейс (UI). 
+
+Добавлена отчётность Allure.
 
 Тест-кейс: Создание тикета.
 
